@@ -1,0 +1,15 @@
+# CTI-110
+# P2HW2 - Tip Tax Total
+# Kenric Brutus
+# 6/17/2018
+
+# calculates the total cost of a meal purchased at a restaurant
+
+foodcharge = float(input("Enter charge for food: "))
+tip = 0.18 * foodcharge
+salestax = 0.07 * foodcharge
+total = foodcharge + tip + salestax
+
+print("Food Charge: $" + format(foodcharge, ",.2f"), "Tip: $" + \
+format(tip, ",.2f"), "Sales Tax: $" + format(salestax, ",.2f"), \
+"Total: $" + format(total, ",.2f"))
