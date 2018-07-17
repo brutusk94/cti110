@@ -1,0 +1,49 @@
+##CTI-110
+##Kenric Brutus
+##P5HW2 GuessingGame
+##7/6/2018
+
+def main():
+    userCongrats = False
+    letsStart = True
+
+    while userCongrats or letsStart:
+        userNumberOfGuesses = 0
+        randomnumber = generateRandomNumber()
+        user_guess = user_input()
+        userNumberOfGuesses += 1
+        message = checkUserNumber(user_guess, randomnumber)
+    
+        while message != ("Congrats!! You guessed the correct number."):
+            print(message)
+            user_guess = user_input("Please enter a number 1 to 100.")
+            userNumberOfGuesses += 1
+            message = checkUserNumber(user_guess, randomnumber)
+        print()    
+        print(message, "It took you", userNumberOfGuesses, "attempts.")
+        userCongrats = True
+
+
+
+def user_input(message = "Guess a number from 1 to 100: " ):
+    user_guess = int(input(message))
+    return user_guess
+
+import random
+def generateRandomNumber():
+    
+    randomnumber = random.randint( 1, 100 )
+    return randomnumber
+    
+
+def checkUserNumber(user_guess, randomnumber):
+    
+    if user_guess > randomnumber:
+        return("The number you entered is to high. Please try again.")
+    elif user_guess < randomnumber:
+        return("The number you entered is to low. Please try again.")
+    else:
+        return("Congrats!! You guessed the correct number.")
+    
+
+main()
