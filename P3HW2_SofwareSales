@@ -1,0 +1,53 @@
+# CTI-110 
+# P3HW2 - Sofware Sales
+# Kenric Brutus
+# 06/22/2018
+
+# define variables or/and user input
+
+quantity=float(input("Please enter the quantity: "))
+PRICE = 99.00
+initialPrice = quantity*PRICE 
+discount10 = 0.10 * initialPrice
+discount20 = 0.20 * initialPrice
+discount30 = 0.30 * initialPrice
+discount40 = 0.40 * initialPrice
+finalPrice10 = initialPrice - discount10
+finalPrice20 = initialPrice - discount20
+finalPrice30 = initialPrice - discount30
+finalPrice40 = initialPrice - discount40
+
+
+# Calculations
+
+if quantity < 10:
+    print ("Your initial price is $",format(initialPrice, "0.2f"))
+    print ("Your discount is 0% ")
+    print ("Your final price is $",format(initialPrice, "0.2f"))
+
+elif quantity >= 10 and quantity <= 19:
+    print ("Your initial price is $",format(initialPrice, "0.2f"))
+    print ("Your discount is 10% ")
+    print ("Your discount amount is $",format(discount10, "0.2f"))
+    print ("Your final price is $",format(finalPrice10, "0.2f"))
+
+elif quantity >= 20 and quantity <= 49:
+    print ("Your initial price is ",format(initialPrice, "0.2f"))
+    print ("Your discount is 20% ")
+    print ("Your discount is ", format(discount20, "0.2f"))
+    print ("Your final price is ",format(finalPrice20, "0.2f"))
+
+elif quantity >= 50 and quantity <= 99:
+    print ("Your initial price is $",format(initialPrice, "0.2f"))
+    print ("Your discount is 30% ")
+    print ("Your discount is $",format(discount30, "0.2f"))
+    print ("Your final price is $",format(finalPrice30, "0.2f"))
+
+else:
+    print ("Your initial price is $",format(initialPrice, "0.2f"))
+    print ("Your discount is 40% ")
+    print ("Your discount is $",format(discount40, "0.2f"))
+    print ("Your final price is $",format(finalPrice40, "0.2f"))
+
+# Display results
+
