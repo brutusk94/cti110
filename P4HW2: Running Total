@@ -1,0 +1,19 @@
+##CTI-110
+##P4HW2: Running Total
+##Kenric Brutus
+##6/29/2018
+
+
+
+
+
+total = 0
+usernumber = float( input( "Please enter the first number or a negative " +\
+                           "number to quit: " ))
+
+while usernumber > -1:
+    total = total + usernumber
+    usernumber = float( input( "Please enter the next number or a " +\
+                             "negative number to quit: " ))
+print()
+print( "The sum of all the numbers you entered is",total )
